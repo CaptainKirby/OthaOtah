@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2ee04f08a088c5c4ea92b06b276e7da3
+guid: baa189be4cfaa483b8c7a9f8811fbd10
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
@@ -7,9 +7,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: pCube10
-    4300002: Bar
-    4300004: bar
+    4300000: bar_straight
     9500000: //RootNode
   materials:
     importMaterials: 0
