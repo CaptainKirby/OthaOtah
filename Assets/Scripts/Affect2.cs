@@ -10,6 +10,7 @@ public class Affect2 : MonoBehaviour {
 	
 	bool pushedLeft;
 	bool pushedRight;
+	public Vector3 curVel;
 	// Use this for initialization
 	void Start () {
 		player = ReInput.players.GetPlayer(0);
@@ -23,11 +24,17 @@ public class Affect2 : MonoBehaviour {
 		inputDirRight.x = player.GetAxis("AxisRightHorizontal");
 		inputDirRight.z = player.GetAxis("AxisRightVertical");
 		
-		pressA = player.GetButtonDown("Y");
+		pressY = player.GetButtonDown("Y");
 		pressA = player.GetButtonDown("A");
 		
-		Debug.DrawLine(this.transform.position, -transform.up *8);
-		
+//		Debug.DrawLine(this.transform.position, -transform.up *8);
+
+
+		if(pressY)
+		{
+			print ("gensgue");
+			transform.localRotation = Quaternion.Euler(0,0,0);
+		}
 		if(pressA)
 		{
 			//			Debug.Log("GGNEO");
