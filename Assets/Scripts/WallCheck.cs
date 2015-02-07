@@ -105,7 +105,7 @@ public class WallCheck : MonoBehaviour
 				if(mTime > 0)
 				{
 //					Debug.Log (mTime);
-					mTime -= Time.deltaTime*2;
+					mTime -= Time.deltaTime*4;
 
 				}
 				else
