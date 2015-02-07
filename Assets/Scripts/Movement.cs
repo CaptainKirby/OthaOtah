@@ -47,6 +47,12 @@ public class Movement : MonoBehaviour {
 //		speed = speed - speed * Mathf.Clamp01(drag * Time.deltaTime);
 //		rigidbody.AddForce(inputDirLeft * speed, ForceMode.Acceleration);
 //		rigidbody.velocity = inputDirLeft * speed * 0.985f; 
+		RaycastHit hit;
+
+		if(Physics.Raycast(transform.position, -Vector3.up, out hit))
+		{
+			transform.position = new Vector3 (transform.position.x,hit.point.y+ 2, transform.position.z);
+		}
 		rigidbody.MovePosition(rigidbody.position + inputDirLeft * speed * Time.deltaTime);
 
 		if(inputDirRight.magnitude > 0.3f)
@@ -63,4 +69,5 @@ public class Movement : MonoBehaviour {
 
 
 	}
+
 }
