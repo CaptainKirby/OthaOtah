@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cd95c0a2e80d64e219d7d7f063c18b81
+guid: c3120995e86314e93b419cf7b4efcb7a
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
@@ -7,8 +7,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Table1
-    4300002: TableDeco
+    4300000: BarWall
     9500000: //RootNode
   materials:
     importMaterials: 1
