@@ -40,21 +40,23 @@ public class Movement : MonoBehaviour {
 
 		pressY = player.GetButtonDown("Y");
 		pressA = player.GetButtonDown("A");
+		inputDirRight = Quaternion.Euler(0, Camera.main.transform.rotation.eulerAngles.y, 0) * inputDirRight;
 
-//		speed = speed + accel * inputDirLeft.magnitude * Time.deltaTime;
+		//		speed = speed + accel * inputDirLeft.magnitude * Time.deltaTime;
 //		speed = Mathf.Clamp(speed, 0f, movementMax);
 //		speed = speed - speed * Mathf.Clamp01(drag * Time.deltaTime);
 //		rigidbody.AddForce(inputDirLeft * speed, ForceMode.Acceleration);
 //		rigidbody.velocity = inputDirLeft * speed * 0.985f; 
 		rigidbody.MovePosition(rigidbody.position + inputDirLeft * speed * Time.deltaTime);
 
-		if(inputDirLeft.magnitude > 0.3f)
+		if(inputDirRight.magnitude > 0.3f)
 		{
-			float newTargetAngle = Mathf.Atan2(inputDirLeft.x, inputDirLeft.z) * Mathf.Rad2Deg;
+			float newTargetAngle = Mathf.Atan2(inputDirRight.x, inputDirRight.z) * Mathf.Rad2Deg;
 			targetAngle = newTargetAngle;
 		}
-		Vector3 pop = new Vector3(0,100,0);
-//		angle = Mathf.SmoothDampAngle(angle, targetAngle, ref angularVelocity, angleSmoothDuration, angleMaxSpeed);
+		angle = Mathf.SmoothDampAngle(angle, targetAngle, ref angularVelocity, angleSmoothDuration, angleMaxSpeed);
+
+		rigidbody.MoveRotation(Quaternion.Euler(0,angle,0));
 
 //		gfxObj.transform.localRotation = Quaternion.Euler(0, angle, 0); 
 

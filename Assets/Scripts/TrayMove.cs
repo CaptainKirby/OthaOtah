@@ -11,9 +11,9 @@ public class TrayMove : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		rigidbody.MovePosition(lockObj.transform.position);
-		Vector3 pop = new Vector3(0,100,0);
-		Quaternion aE = Quaternion.Euler(pop * Time.deltaTime);
-		rigidbody.MoveRotation(rigidbody.rotation * aE); 
+//		rigidbody.MovePosition(lockObj.transform.position);
+//		Vector3 pop = new Vector3(0,100,0);
+//		Quaternion aE = Quaternion.Euler(pop * Time.deltaTime);
+//		rigidbody.MoveRotation(rigidbody.rotation * aE); 
 	}
 }
