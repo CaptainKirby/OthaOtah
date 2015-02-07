@@ -9,6 +9,7 @@ public class Power : MonoBehaviour {
 	private bool pressA;
 	private bool used;
 	public GameObject powerGauge;
+	public bool dead;
 	// Use this for initialization
 	void Start () {
 		player = ReInput.players.GetPlayer(0);
@@ -25,6 +26,10 @@ public class Power : MonoBehaviour {
 		{
 			used = true;
 			power = 100;
+		}
+		if(power <= 11 && !dead)
+		{
+			dead = true;
 		}
 	}
 
