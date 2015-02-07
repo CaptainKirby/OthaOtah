@@ -9,14 +9,12 @@ ModelImporter:
     400000: //RootNode
     400002: pCylinder1
     400004: pSphere1
-    2300000: //RootNode
-    2300002: pCylinder1
-    2300004: pSphere1
-    3300000: //RootNode
-    3300002: pCylinder1
-    3300004: pSphere1
-    4300000: pSphere1
-    4300002: pCylinder1
+    2300000: pCylinder1
+    2300002: pSphere1
+    3300000: pCylinder1
+    3300002: pSphere1
+    4300000: pCylinder1
+    4300002: pSphere1
     9500000: //RootNode
   materials:
     importMaterials: 0
@@ -44,7 +42,7 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
+    optimizeMeshForGPU: 0
     weldVertices: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
@@ -54,7 +52,7 @@ ModelImporter:
     normalSmoothAngle: 60
     splitTangentsAcrossUV: 1
     normalImportMode: 0
-    tangentImportMode: 0
+    tangentImportMode: 1
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
@@ -69,6 +67,6 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   additionalBone: 0
   userData: 
