@@ -53,13 +53,36 @@ public class Movement : MonoBehaviour {
 	//		speed = speed - speed * Mathf.Clamp01(drag * Time.deltaTime);
 	//		rigidbody.AddForce(inputDirLeft * speed, ForceMode.Acceleration);
 	//		rigidbody.velocity = inputDirLeft * speed * 0.985f; 
-			RaycastHit hit;
-
-			if(Physics.Raycast(transform.position, -Vector3.up, out hit))
+			RaycastHit hitDown;
+			RaycastHit hitFront;
+			RaycastHit hitBack;
+			RaycastHit hitRight;
+			RaycastHit hitLeft;
+			if(Physics.Raycast(transform.position, -Vector3.up, out hitDown))
 			{
-				transform.position = new Vector3 (transform.position.x,hit.point.y+ 2, transform.position.z);
+				transform.position = new Vector3 (transform.position.x,hitDown.point.y+ 2, transform.position.z);
+			}
+			if(Physics.Raycast(transform.position, Vector3.forward, out hitFront, 1f))
+			{
+//				Debug.Log ("ngues");
+				transform.position = this.transform.position - Vector3.forward*0.08f;
+			}
+			if(Physics.Raycast(transform.position, -Vector3.forward, out hitBack, 1f))
+			{
+//				Debug.Log ("ngues");
+				transform.position = this.transform.position + Vector3.forward*0.08f;
+			}
+			if(Physics.Raycast(transform.position, Vector3.right, out hitRight, 1f))
+			{
+//				Debug.Log ("ngues");
+				transform.position = this.transform.position - Vector3.right*0.08f;
 			}
 
+			if(Physics.Raycast(transform.position, -Vector3.right, out hitLeft, 1f))
+			{
+				//				Debug.Log ("ngues");
+				transform.position = this.transform.position + Vector3.right*0.08f;
+			}
 			if(!rotating)
 			{
 
