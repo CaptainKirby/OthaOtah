@@ -1,29 +1,23 @@
 fileFormatVersion: 2
-guid: a19304930263e46f7a1091da4c74363d
+guid: d6dfd30e5105a494d90282d38ba8a296
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: pCube2
-    100004: pCube3
-    100006: pCube4
-    100008: transform6
-    100010: transform7
-    400000: //RootNode
-    400002: pCube2
-    400004: pCube3
-    400006: pCube4
-    400008: transform6
-    400010: transform7
-    2300000: pCube4
-    2300002: //RootNode
-    3300000: pCube4
-    3300002: //RootNode
-    4300000: pCube4
-    4300002: POLARbearrug
+    100000: RechargeMovingRing
+    100002: //RootNode
+    100004: RechargeStation
+    400000: RechargeMovingRing
+    400002: //RootNode
+    400004: RechargeStation
+    2300000: RechargeMovingRing
+    2300002: RechargeStation
+    3300000: RechargeMovingRing
+    3300002: RechargeStation
+    4300000: RechargeMovingRing
+    4300002: RechargeStation
     9500000: //RootNode
   materials:
-    importMaterials: 0
+    importMaterials: 1
     materialName: 0
     materialSearch: 1
   animations:
@@ -44,7 +38,7 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
-    importBlendShapes: 0
+    importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -58,8 +52,8 @@ ModelImporter:
     normalSmoothAngle: 60
     splitTangentsAcrossUV: 1
     normalImportMode: 0
-    tangentImportMode: 0
-  importAnimation: 0
+    tangentImportMode: 1
+  importAnimation: 1
   copyAvatar: 0
   humanDescription:
     human: []
