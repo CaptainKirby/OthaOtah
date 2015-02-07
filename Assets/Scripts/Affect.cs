@@ -25,19 +25,24 @@ public class Affect : MonoBehaviour {
 	void Update () {
 		inputDirLeft.x = player.GetAxis("AxisLeftHorizontal");
 		inputDirLeft.z = player.GetAxis("AxisLeftVertical");
+//		inputDirLeft.y = transform.up.y;
 		inputDirRight.x = player.GetAxis("AxisRightHorizontal");
 		inputDirRight.z = player.GetAxis("AxisRightVertical");
 
+//		inputDirLeft = inputDirLeft + Vector3.up;
 //		inputDirLeft = new Vector3(inputDirLeft.x, transform.up, inputDirLeft.z);
-//		inputDirLeft= Vector3.Cross(inputDirLeft, transform.up*8);
+//		inputDirLeft= transform.up + inputDirLeft.normalized;
 		pressY = player.GetButtonDown("Y");
 		pressA = player.GetButtonDown("A");
+//
+//		Debug.DrawRay(this.transform.position, transform.forward * 5);
+//		Debug.DrawRay(this.transform.position, Vector3.forward * 5);
+//		Debug.DrawRay(this.transform.position, Vector3.forward+ transform.forward * 5);
 
-		Debug.DrawRay(transform.up * 8, inputDirLeft - transform.up, Color.red);
-//		Debug.DrawLine(transform.up * 8, transform.TransformDirection(inputDirLeft)*8);
-		Debug.Log (transform.localRotation.eulerAngles.normalized);
-//		transform.localRotation = Quaternion.Euler(Vector3.SmoothDamp(this.transform.localRotation.eulerAngles, Vector3.zero, ref curVel,1));
-
+		
+		//		Debug.DrawRay(transform.position,inputDirLeft, Color.red);
+//		Debug.DrawLine(transform.up * 8, inputDirLeft * 8, Color.red);
+		Debug.Log (inputDirLeft.magnitude);
 		if(pressY)
 		{
 //			print ("gensgue");
@@ -53,7 +58,7 @@ public class Affect : MonoBehaviour {
 		if(inputDirLeft.magnitude > 0.8f && !pushedLeft)
 		{
 			pushedLeft = true;
-			StartCoroutine(PushTop(inputDirLeft.normalized));
+			StartCoroutine(PushTop(inputDirLeft));
 		}
 		if(inputDirLeft.magnitude <0.8f && pushedLeft)
 			pushedLeft = false;
@@ -64,7 +69,7 @@ public class Affect : MonoBehaviour {
 		if(inputDirRight.magnitude > 0.8f && !pushedRight)
 		{
 			pushedRight = true;
-			StartCoroutine(PushBot(inputDirRight.normalized));
+			StartCoroutine(PushBot(inputDirRight));
 		}
 		if(inputDirRight.magnitude <0.8f && pushedRight)
 			pushedRight = false;
@@ -82,7 +87,8 @@ public class Affect : MonoBehaviour {
 			if(mTime < 0.1f)
 			{
 				mTime += Time.deltaTime;
-				rigidbody.AddForceAtPosition(transform.TransformDirection(dir) * pushForce, transform.up * 8, ForceMode.Impulse);
+
+				rigidbody.AddForceAtPosition(dir * pushForce, transform.up * 8, ForceMode.Impulse);
 			}
 			else
 			{
@@ -101,7 +107,7 @@ public class Affect : MonoBehaviour {
 			if(mTime < 0.1f)
 			{
 				mTime += Time.deltaTime;
-				rigidbody.AddForceAtPosition(transform.TransformDirection(dir) * pushForce, -transform.up * 3, ForceMode.Impulse);
+				rigidbody.AddForceAtPosition(dir * pushForce, -transform.up * 3, ForceMode.Impulse);
 			}
 			else
 			{
