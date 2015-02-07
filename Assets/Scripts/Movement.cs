@@ -26,6 +26,7 @@ public class Movement : MonoBehaviour {
 	public GameObject gfxObj;
 	private bool rotating;
 	public bool dead;
+	public ParticleSystem footsteps;
 	void Start () 
 	{
 		player = ReInput.players.GetPlayer(0);
@@ -85,12 +86,20 @@ public class Movement : MonoBehaviour {
 			}
 			if(!rotating)
 			{
-
+				if(inputDirLeft.magnitude > 0.3f)
+				{
+					footsteps.enableEmission = true;
+				}
+				else
+				{
+					footsteps.enableEmission = false;
+				}
 				rigidbody.MovePosition(rigidbody.position + inputDirLeft * speed * Time.deltaTime);
 			}
 
 			if(inputDirRight.magnitude > 0.3f)
 			{
+				footsteps.enableEmission = false;
 				rotating = true;
 				float newTargetAngle = Mathf.Atan2(inputDirRight.x, inputDirRight.z) * Mathf.Rad2Deg;
 				targetAngle = newTargetAngle;
