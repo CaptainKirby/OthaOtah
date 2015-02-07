@@ -11,6 +11,12 @@ ModelImporter:
     100010: polySurface4
     100012: //RootNode
     100014: polySurface18
+    100016: polySurface79
+    100018: polySurface80
+    100020: polySurface81
+    100022: polySurface82
+    100024: polySurface83
+    100026: polySurface84
     400000: pCube1
     400002: pCylinder3
     400004: pCylinder5
@@ -19,6 +25,12 @@ ModelImporter:
     400010: polySurface4
     400012: //RootNode
     400014: polySurface18
+    400016: polySurface79
+    400018: polySurface80
+    400020: polySurface81
+    400022: polySurface82
+    400024: polySurface83
+    400026: polySurface84
     2300000: pCube1
     2300002: pCylinder3
     2300004: pCylinder5
@@ -26,6 +38,10 @@ ModelImporter:
     2300008: polySurface1
     2300010: polySurface4
     2300012: polySurface18
+    2300014: polySurface79
+    2300016: polySurface81
+    2300018: polySurface83
+    2300020: polySurface84
     3300000: pCube1
     3300002: pCylinder3
     3300004: pCylinder5
@@ -33,6 +49,10 @@ ModelImporter:
     3300008: polySurface1
     3300010: polySurface4
     3300012: polySurface18
+    3300014: polySurface79
+    3300016: polySurface81
+    3300018: polySurface83
+    3300020: polySurface84
     4300000: pCube1
     4300002: pCylinder3
     4300004: pCylinder5
@@ -40,6 +60,10 @@ ModelImporter:
     4300008: polySurface4
     4300010: polySurface1
     4300012: polySurface18
+    4300014: polySurface79
+    4300016: polySurface81
+    4300018: polySurface83
+    4300020: polySurface84
     9500000: //RootNode
   materials:
     importMaterials: 0
@@ -63,11 +87,11 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
-    importBlendShapes: 1
+    importBlendShapes: 0
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
+    optimizeMeshForGPU: 0
     weldVertices: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
