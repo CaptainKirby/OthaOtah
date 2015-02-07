@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 412134}
   - 33: {fileID: 3312134}
   - 23: {fileID: 2312134}
-  - 95: {fileID: 9512134}
+  - 65: {fileID: 6584470}
   m_Layer: 0
   m_Name: bar_straight
   m_TagString: Untagged
@@ -25,7 +25,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 112134}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 3.57627869e-07}
-  m_LocalPosition: {x: -2, y: 0, z: 10}
+  m_LocalPosition: {x: 12.3699999, y: 0, z: -6.11000013}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -57,21 +57,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 112134}
   m_Mesh: {fileID: 4300000, guid: baa189be4cfaa483b8c7a9f8811fbd10, type: 3}
---- !u!95 &9512134
-Animator:
-  serializedVersion: 3
+--- !u!65 &6584470
+BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 112134}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: baa189be4cfaa483b8c7a9f8811fbd10, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2.70002222, z: 2.98421288}
+  m_Center: {x: -1, y: 1.35001111, z: 1.49199772}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

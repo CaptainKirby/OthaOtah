@@ -12,7 +12,7 @@ GameObject:
   - 23: {fileID: 2300000}
   - 64: {fileID: 6400000}
   - 54: {fileID: 5400000}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Glass02
   m_TagString: glass
   m_Icon: {fileID: 0}
@@ -26,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.8066812e-08, y: -.217091084, z: 1.80668156e-08}
+  m_LocalPosition: {x: 13.79, y: 2.71000004, z: -9.61999989}
   m_LocalScale: {x: 3.42488647, y: 3.42488694, z: 3.42488694}
   m_Children: []
   m_Father: {fileID: 0}
