@@ -1,24 +1,13 @@
 fileFormatVersion: 2
-guid: 99514b2c12f17cb4ab5926419bbb574e
+guid: d1df7999075cf45678ad8d176daffb45
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
     100000: //RootNode
-    100002: polySurface119
-    100004: polySurface121
-    100006: transform10
-    100008: transform9
     400000: //RootNode
-    400002: polySurface119
-    400004: polySurface121
-    400006: transform10
-    400008: transform9
     2300000: //RootNode
-    2300002: polySurface121
     3300000: //RootNode
-    3300002: polySurface121
-    4300000: BarWall
-    4300002: polySurface121
+    4300000: Bottle02
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -39,7 +28,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: .00999999978
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
