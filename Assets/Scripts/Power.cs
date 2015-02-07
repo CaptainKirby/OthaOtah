@@ -13,6 +13,7 @@ public class Power : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		player = ReInput.players.GetPlayer(0);
+		powerGauge = GameObject.Find("powerGauge");
 
 	}
 	
