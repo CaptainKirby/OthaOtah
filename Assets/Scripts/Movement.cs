@@ -53,6 +53,8 @@ public class Movement : MonoBehaviour {
 		{
 			transform.position = new Vector3 (transform.position.x,hit.point.y+ 2, transform.position.z);
 		}
+
+
 		rigidbody.MovePosition(rigidbody.position + inputDirLeft * speed * Time.deltaTime);
 
 		if(inputDirRight.magnitude > 0.3f)

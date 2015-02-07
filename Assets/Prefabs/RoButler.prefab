@@ -87,6 +87,7 @@ GameObject:
   - 114: {fileID: 11400002}
   - 114: {fileID: 11400000}
   - 54: {fileID: 5400000}
+  - 114: {fileID: 11400004}
   m_Layer: 0
   m_Name: RoButler
   m_TagString: Untagged
@@ -260,9 +261,11 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 400016}
+  - {fileID: 400018}
   m_Father: {fileID: 400020}
-  m_RootOrder: 3
+  m_RootOrder: 1
 --- !u!4 &400014
 Transform:
   m_ObjectHideFlags: 1
@@ -274,15 +277,15 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400020}
-  m_RootOrder: 2
+  m_RootOrder: 0
 --- !u!4 &400016
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100016}
-  m_LocalRotation: {x: 0, y: -0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.15573096, y: 3.6138339, z: .114845626}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.15573096, y: 3.6138339, z: .114845634}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400008}
@@ -290,20 +293,20 @@ Transform:
   - {fileID: 400004}
   - {fileID: 400002}
   - {fileID: 400000}
-  m_Father: {fileID: 400020}
-  m_RootOrder: 1
+  m_Father: {fileID: 400012}
+  m_RootOrder: 0
 --- !u!4 &400018
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100018}
-  m_LocalRotation: {x: 0, y: -0, z: 0, w: 1}
-  m_LocalPosition: {x: .656276107, y: 3.13027191, z: .0179306865}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .656275988, y: 3.13027191, z: .0179306865}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 400020}
-  m_RootOrder: 0
+  m_Father: {fileID: 400012}
+  m_RootOrder: 1
 --- !u!4 &400020
 Transform:
   m_ObjectHideFlags: 1
@@ -314,8 +317,6 @@ Transform:
   m_LocalPosition: {x: 0, y: -2.0201087, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 400018}
-  - {fileID: 400016}
   - {fileID: 400014}
   - {fileID: 400012}
   m_Father: {fileID: 400010}
@@ -496,6 +497,19 @@ MonoBehaviour:
   angleSmoothDuration: .800000012
   angleMaxSpeed: 5800
   gfxObj: {fileID: 0}
+--- !u!114 &11400004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5fe65b6a4d45e845a65022d6c2372fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  topPart: {fileID: 100012}
+  tray: {fileID: 0}
 --- !u!136 &13600000
 CapsuleCollider:
   m_ObjectHideFlags: 1

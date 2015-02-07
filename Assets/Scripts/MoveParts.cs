@@ -6,9 +6,14 @@ public class MoveParts : MonoBehaviour {
 	public GameObject topPart;
 	public GameObject tray;
 	private bool pressY;
+	private bool pressB;
 
+	
 	private bool crouch;
 	bool crouching;
+
+	private bool flipping;
+	private bool flip;
 	Player player;
 	// Use this for initialization
 	void Start () {
@@ -19,7 +24,15 @@ public class MoveParts : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		pressY = player.GetButtonDown("Y");
+		pressB = player.GetButtonDown("B");
 
+		if(pressB && !flip && !flipping)
+		{
+			flip = true;
+			flipping =true;
+			StartCoroutine(Flip());
+		}
+		
 		if(pressY && !crouch && !crouching)
 		{
 			crouching = true;
@@ -35,8 +48,51 @@ public class MoveParts : MonoBehaviour {
 		}
 	}
 
+	IEnumerator Flip()
+	{
+		flip = false;
+		bool onOff = true;
+		float mTime = 0;
+		bool oneWay = false;
+		while(onOff)
+		{
+			if(!oneWay)
+			{
+				if(mTime <1)
+				{
+					mTime += Time.deltaTime * 3;
+					tray.transform.localRotation = Quaternion.Euler(Mathf.LerpAngle(0,80,mTime), tray.transform.localRotation.y, tray.transform.localRotation.z);
+				}
+				else
+				{
+					mTime = 0;
+					oneWay = true;
+				}
+			}
+			else
+			{
+				if(mTime <1)
+				{
+					mTime += Time.deltaTime * 2;
+					tray.transform.localRotation = Quaternion.Euler(Mathf.LerpAngle(50,0,mTime), tray.transform.localRotation.y, tray.transform.localRotation.z);
+				}
+				else
+				{
+					flipping = false;
+					mTime = 0;
+
+					onOff = false;
+
+					yield break;
+				}
+			}
+
+			yield return null;
+		}
+	}
 	IEnumerator Crouch(bool goDown)
 	{
+//		flip = false;
 		bool onOff = true;
 		float mTime = 0;
 		while(onOff)
