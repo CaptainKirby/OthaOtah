@@ -9,9 +9,6 @@ public class Power : MonoBehaviour {
 	private bool pressA;
 	private bool used;
 	public GameObject powerGauge;
-	public GameObject particle;
-	public GameObject shutDownParticle;
-	public bool dead;
 	// Use this for initialization
 	void Start () {
 		player = ReInput.players.GetPlayer(0);
@@ -28,13 +25,6 @@ public class Power : MonoBehaviour {
 		{
 			used = true;
 			power = 100;
-			Instantiate(particle, this.transform.position, Quaternion.identity);
-		}
-
-		if(power <= 11 && !dead)
-		{
-			dead = true;
-			Instantiate(shutDownParticle, this.transform.position, Quaternion.identity);
 		}
 	}
 

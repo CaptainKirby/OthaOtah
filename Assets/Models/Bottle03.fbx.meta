@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 43c7667143b6041a4a1289d626c81f05
+guid: 782fbe6bc0e7944789bd87e3d5bca95c
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
@@ -7,7 +7,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: polySurface85
+    4300000: Bottle03
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -28,7 +28,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: .00999999978
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
