@@ -210,6 +210,10 @@ Prefab:
       propertyPath: tray
       value: 
       objectReference: {fileID: 1759801231}
+    - target: {fileID: 3300000, guid: b78f8a7108bc1d340b4c92cd161e638d, type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300022, guid: 7dfd24c9782cfb846a39083f4268131f, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b78f8a7108bc1d340b4c92cd161e638d, type: 2}
   m_RootGameObject: {fileID: 1680743293}
@@ -516,7 +520,7 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 121555524}
   m_GameObject: {fileID: 625369312}
-  m_Mesh: {fileID: 4300020, guid: 7dfd24c9782cfb846a39083f4268131f, type: 3}
+  m_Mesh: {fileID: 4300022, guid: 7dfd24c9782cfb846a39083f4268131f, type: 3}
 --- !u!1 &670349619
 GameObject:
   m_ObjectHideFlags: 0
