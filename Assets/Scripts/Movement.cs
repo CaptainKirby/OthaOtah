@@ -27,6 +27,7 @@ public class Movement : MonoBehaviour {
 	private bool rotating;
 	public bool dead;
 	public ParticleSystem footsteps;
+	public bool starting;
 	void Start () 
 	{
 		player = ReInput.players.GetPlayer(0);
@@ -47,7 +48,7 @@ public class Movement : MonoBehaviour {
 		pressA = player.GetButtonDown("A");
 		inputDirRight = Quaternion.Euler(0, Camera.main.transform.rotation.eulerAngles.y, 0) * inputDirRight;
 
-		if(!dead)
+		if(!dead && !starting)
 		{
 			//		speed = speed + accel * inputDirLeft.magnitude * Time.deltaTime;
 	//		speed = Mathf.Clamp(speed, 0f, movementMax);

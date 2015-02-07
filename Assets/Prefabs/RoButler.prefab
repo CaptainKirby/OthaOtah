@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 400000}
   m_Layer: 0
   m_Name: spawnpoints
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25,7 +25,7 @@ GameObject:
   - 4: {fileID: 400002}
   m_Layer: 0
   m_Name: spawnpoints
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40,7 +40,7 @@ GameObject:
   - 4: {fileID: 400004}
   m_Layer: 0
   m_Name: spawnpoints
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -55,7 +55,7 @@ GameObject:
   - 4: {fileID: 400006}
   m_Layer: 0
   m_Name: spawnpoints
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -70,7 +70,7 @@ GameObject:
   - 4: {fileID: 400008}
   m_Layer: 0
   m_Name: spawnpoints
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -89,9 +89,12 @@ GameObject:
   - 54: {fileID: 5400000}
   - 114: {fileID: 11400004}
   - 114: {fileID: 11400006}
+  - 114: {fileID: 11400010}
+  - 114: {fileID: 11400012}
+  - 114: {fileID: 11400008}
   m_Layer: 0
   m_Name: RoButler
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,7 +109,7 @@ GameObject:
   - 4: {fileID: 400012}
   m_Layer: 0
   m_Name: tray
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -123,7 +126,7 @@ GameObject:
   - 23: {fileID: 2300000}
   m_Layer: 0
   m_Name: polySurface84
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -140,7 +143,7 @@ GameObject:
   - 23: {fileID: 2300002}
   m_Layer: 0
   m_Name: polySurface83
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -157,7 +160,7 @@ GameObject:
   - 23: {fileID: 2300004}
   m_Layer: 0
   m_Name: polySurface81
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -172,7 +175,7 @@ GameObject:
   - 4: {fileID: 400020}
   m_Layer: 0
   m_Name: polySurface80
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -190,7 +193,7 @@ GameObject:
   - 64: {fileID: 6400000}
   m_Layer: 0
   m_Name: tray
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -205,7 +208,7 @@ GameObject:
   - 4: {fileID: 400024}
   m_Layer: 0
   m_Name: robutler_01
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -222,7 +225,7 @@ GameObject:
   - 23: {fileID: 2300008}
   m_Layer: 0
   m_Name: powerGauge
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -239,7 +242,7 @@ GameObject:
   - 23: {fileID: 2300010}
   m_Layer: 0
   m_Name: polySurface94
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -256,7 +259,7 @@ GameObject:
   - 23: {fileID: 2300012}
   m_Layer: 0
   m_Name: polySurface93
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -273,7 +276,7 @@ GameObject:
   - 199: {fileID: 19900000}
   m_Layer: 0
   m_Name: footstepsParticle
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -782,8 +785,58 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   power: 100
-  powerGauge: {fileID: 100026}
+  powerGauge: {fileID: 0}
   dead: 0
+--- !u!114 &11400008
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cf2f69f8c5d0c54086dafa9f9552f24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerStation: {fileID: 100002, guid: 14ff0a0bbe8a0cc4bb001509ffe6e25d, type: 2}
+  player: {fileID: 0}
+--- !u!114 &11400010
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 813776c2231164d48a58d68ad9b6902a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  getDrink: 0
+  deliverDrink: 0
+  arrow: {fileID: 100000, guid: 6fcf2ef6a180aeb43895cf354e34b24a, type: 2}
+  barLocation: {fileID: 0}
+  spawnDrinkArrow: 0
+  spawnDeliverArrow: 0
+  clients: []
+  curClient: 0
+  curClientObj: {fileID: 0}
+  end: 0
+--- !u!114 &11400012
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55afd8c689523114a8d9748fe404e9c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curBottles: []
+  destroyedBottles: 0
+  deliveredBottles: 0
+  deliveries: 0
+  successDeliveries: 0
 --- !u!136 &13600000
 CapsuleCollider:
   m_ObjectHideFlags: 1

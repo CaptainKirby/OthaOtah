@@ -28,7 +28,7 @@ public class Power : MonoBehaviour {
 			used = true;
 			power = 100;
 		}
-		if(power <= 11 && !dead)
+		if(power <= 11 && !dead && !GetComponent<Movement>().starting)
 		{
 			dead = true;
 		}
