@@ -13,9 +13,15 @@ public class PickUpBottles : MonoBehaviour {
 	public int bottlesToSpawn = 3;
 
 	public GameObject tray;
+
+	public List<Transform> spawnPoints;
 	void Start () 
 	{
 		player = ReInput.players.GetPlayer(0);
+		foreach(Transform tr in tray.transform)
+		{
+			spawnPoints.Add(tr);
+		}
 	}
 
 	void Update () 
@@ -27,7 +33,7 @@ public class PickUpBottles : MonoBehaviour {
 		{
 			for(int i = 0; i < bottlesToSpawn; i++)
 			{
-				Instantiate(bottles[Random.Range(0, bottles.Count)], new Vector3(tray.transform.position.x + Random.Range(0.1f, 0.8f), tray.transform.position.y + 1, tray.transform.position.z + Random.Range(0.1f, 0.8f)), Quaternion.identity);
+				Instantiate(bottles[i], spawnPoints[i].position, Quaternion.identity);
 			}
 		}
 	}
