@@ -24,6 +24,8 @@ public class Movement : MonoBehaviour {
 	public float angleMaxSpeed = 5800f;
 
 	public GameObject gfxObj;
+	private bool rotating;
+	public bool dead;
 	void Start () 
 	{
 		player = ReInput.players.GetPlayer(0);
@@ -32,6 +34,8 @@ public class Movement : MonoBehaviour {
 
 	void FixedUpdate () 
 	{
+
+		dead = GetComponent<Power>().dead;
 		inputDirLeft.x = player.GetAxis("AxisLeftHorizontal");
 		inputDirLeft.z = player.GetAxis("AxisLeftVertical");
 
@@ -42,30 +46,63 @@ public class Movement : MonoBehaviour {
 		pressA = player.GetButtonDown("A");
 		inputDirRight = Quaternion.Euler(0, Camera.main.transform.rotation.eulerAngles.y, 0) * inputDirRight;
 
-		//		speed = speed + accel * inputDirLeft.magnitude * Time.deltaTime;
-//		speed = Mathf.Clamp(speed, 0f, movementMax);
-//		speed = speed - speed * Mathf.Clamp01(drag * Time.deltaTime);
-//		rigidbody.AddForce(inputDirLeft * speed, ForceMode.Acceleration);
-//		rigidbody.velocity = inputDirLeft * speed * 0.985f; 
-		RaycastHit hit;
-
-		if(Physics.Raycast(transform.position, -Vector3.up, out hit))
+		if(!dead)
 		{
-			transform.position = new Vector3 (transform.position.x,hit.point.y+ 2, transform.position.z);
+			//		speed = speed + accel * inputDirLeft.magnitude * Time.deltaTime;
+	//		speed = Mathf.Clamp(speed, 0f, movementMax);
+	//		speed = speed - speed * Mathf.Clamp01(drag * Time.deltaTime);
+	//		rigidbody.AddForce(inputDirLeft * speed, ForceMode.Acceleration);
+	//		rigidbody.velocity = inputDirLeft * speed * 0.985f; 
+			RaycastHit hitDown;
+			RaycastHit hitFront;
+			RaycastHit hitBack;
+			RaycastHit hitRight;
+			RaycastHit hitLeft;
+			if(Physics.Raycast(transform.position, -Vector3.up, out hitDown))
+			{
+				transform.position = new Vector3 (transform.position.x,hitDown.point.y+ 2, transform.position.z);
+			}
+			if(Physics.Raycast(transform.position, Vector3.forward, out hitFront, 1f))
+			{
+//				Debug.Log ("ngues");
+				transform.position = this.transform.position - Vector3.forward*0.08f;
+			}
+			if(Physics.Raycast(transform.position, -Vector3.forward, out hitBack, 1f))
+			{
+//				Debug.Log ("ngues");
+				transform.position = this.transform.position + Vector3.forward*0.08f;
+			}
+			if(Physics.Raycast(transform.position, Vector3.right, out hitRight, 1f))
+			{
+//				Debug.Log ("ngues");
+				transform.position = this.transform.position - Vector3.right*0.08f;
+			}
+
+			if(Physics.Raycast(transform.position, -Vector3.right, out hitLeft, 1f))
+			{
+				//				Debug.Log ("ngues");
+				transform.position = this.transform.position + Vector3.right*0.08f;
+			}
+			if(!rotating)
+			{
+
+				rigidbody.MovePosition(rigidbody.position + inputDirLeft * speed * Time.deltaTime);
+			}
+
+			if(inputDirRight.magnitude > 0.3f)
+			{
+				rotating = true;
+				float newTargetAngle = Mathf.Atan2(inputDirRight.x, inputDirRight.z) * Mathf.Rad2Deg;
+				targetAngle = newTargetAngle;
+			}
+			else
+			{
+				rotating = false;
+			}
+			angle = Mathf.SmoothDampAngle(angle, targetAngle, ref angularVelocity, angleSmoothDuration, angleMaxSpeed);
+
+			rigidbody.MoveRotation(Quaternion.Euler(0,angle,0));
 		}
-
-
-		rigidbody.MovePosition(rigidbody.position + inputDirLeft * speed * Time.deltaTime);
-
-		if(inputDirRight.magnitude > 0.3f)
-		{
-			float newTargetAngle = Mathf.Atan2(inputDirRight.x, inputDirRight.z) * Mathf.Rad2Deg;
-			targetAngle = newTargetAngle;
-		}
-		angle = Mathf.SmoothDampAngle(angle, targetAngle, ref angularVelocity, angleSmoothDuration, angleMaxSpeed);
-
-		rigidbody.MoveRotation(Quaternion.Euler(0,angle,0));
-
 //		gfxObj.transform.localRotation = Quaternion.Euler(0, angle, 0); 
 
 

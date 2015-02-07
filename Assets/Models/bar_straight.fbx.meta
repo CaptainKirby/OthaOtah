@@ -1,27 +1,16 @@
 fileFormatVersion: 2
-guid: 99514b2c12f17cb4ab5926419bbb574e
+guid: baa189be4cfaa483b8c7a9f8811fbd10
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
     100000: //RootNode
-    100002: polySurface119
-    100004: polySurface121
-    100006: transform10
-    100008: transform9
     400000: //RootNode
-    400002: polySurface119
-    400004: polySurface121
-    400006: transform10
-    400008: transform9
     2300000: //RootNode
-    2300002: polySurface121
     3300000: //RootNode
-    3300002: polySurface121
-    4300000: BarWall
-    4300002: polySurface121
+    4300000: bar_straight
     9500000: //RootNode
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
   animations:
@@ -42,11 +31,11 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
-    importBlendShapes: 1
+    importBlendShapes: 0
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
+    optimizeMeshForGPU: 0
     weldVertices: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001

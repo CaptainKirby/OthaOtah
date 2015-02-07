@@ -697,9 +697,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bottles:
-  - {fileID: 100000, guid: 41b4752dd90a72a45b6c5bb3988c0163, type: 2}
-  - {fileID: 100000, guid: 41b4752dd90a72a45b6c5bb3988c0163, type: 2}
-  - {fileID: 100000, guid: 41b4752dd90a72a45b6c5bb3988c0163, type: 2}
+  - {fileID: 100000, guid: 43e561b0b6eefe04d935c895edeaebd7, type: 2}
+  - {fileID: 100000, guid: 7822eb360f2a3134f935ced2fe9aa2f9, type: 2}
+  - {fileID: 100000, guid: 47ff1ebc2b2f4604394b42ee5e4f9e65, type: 2}
   bottlesToSpawn: 3
   tray: {fileID: 100022}
   spawnPoints: []
@@ -725,6 +725,7 @@ MonoBehaviour:
   angleSmoothDuration: .800000012
   angleMaxSpeed: 5800
   gfxObj: {fileID: 0}
+  dead: 0
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -750,7 +751,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   power: 100
-  powerGauge: {fileID: 0}
+  powerGauge: {fileID: 100026}
+  particle: {fileID: 100000, guid: 0bd33bc79478dbf458cfe157dc780bf8, type: 2}
+  shutDownParticle: {fileID: 100000, guid: 673cc7ba5e43b154ca62df8319f1a787, type: 2}
+  dead: 0
 --- !u!136 &13600000
 CapsuleCollider:
   m_ObjectHideFlags: 1
