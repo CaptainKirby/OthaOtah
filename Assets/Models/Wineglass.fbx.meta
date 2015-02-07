@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 94def3987aa3c4e2582aeb3ae6cb7b5a
+guid: 76f2273d09cff41d6b972356aa28db49
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
@@ -7,7 +7,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Glass03
+    4300000: Wineglass
     9500000: //RootNode
   materials:
     importMaterials: 1

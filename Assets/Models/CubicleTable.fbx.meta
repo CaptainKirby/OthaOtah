@@ -1,13 +1,25 @@
 fileFormatVersion: 2
-guid: 94def3987aa3c4e2582aeb3ae6cb7b5a
+guid: 5e13e3639fe6e44ddacb809e6459f2f3
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
     100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Glass03
+    100002: CubicleTable
+    100004: polySurface84
+    100006: polySurface85
+    100008: TableDeco
+    100010: transform4
+    100012: transform5
+    400000: CubicleTable
+    400002: //RootNode
+    400004: polySurface84
+    400006: polySurface85
+    400008: TableDeco
+    400010: transform4
+    400012: transform5
+    2300000: CubicleTable
+    3300000: CubicleTable
+    4300000: CubicleTable
     9500000: //RootNode
   materials:
     importMaterials: 1
