@@ -15,8 +15,14 @@ public class PickUpBottles : MonoBehaviour {
 	public GameObject tray;
 
 	public List<Transform> spawnPoints;
+
+	private Objectives objectives;
+	private BottleManager bottleMgr;
+
 	void Start () 
 	{
+		bottleMgr = GameObject.FindObjectOfType<BottleManager>();
+		objectives = GetComponent<Objectives>();
 		player = ReInput.players.GetPlayer(0);
 		foreach(Transform tr in tray.transform)
 		{
@@ -29,11 +35,14 @@ public class PickUpBottles : MonoBehaviour {
 		pressY = player.GetButtonDown("Y");
 		pressA = player.GetButtonDown("A");
 
-		if(pressA && insidePickup)
+		if(pressA && insidePickup && objectives.getDrink)
 		{
+			objectives.getDrink = false;
+
 			for(int i = 0; i < bottlesToSpawn; i++)
 			{
-				Instantiate(bottles[i], spawnPoints[i].position, Quaternion.identity);
+				GameObject bottle = Instantiate(bottles[i], spawnPoints[i].position, Quaternion.identity) as GameObject;
+				bottleMgr.curBottles.Add(bottles[i]);
 			}
 		}
 	}

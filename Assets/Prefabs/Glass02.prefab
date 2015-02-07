@@ -12,6 +12,7 @@ GameObject:
   - 23: {fileID: 2300000}
   - 64: {fileID: 6400000}
   - 54: {fileID: 5400000}
+  - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: Glass02
   m_TagString: glass
@@ -86,6 +87,17 @@ MeshCollider:
   m_SmoothSphereCollisions: 0
   m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 1ad531300a8924183addc5dfd1a7bbf7, type: 3}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 419109e83c81d2b488978a234aff8f8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
