@@ -10,6 +10,7 @@ ModelImporter:
     100008: AlienFatLadyEye2
     100010: AlienFatLadyLowerLip
     100012: AlienFatLadyUpperLip
+    100014: Bar
     400000: AlienFatLady
     400002: //RootNode
     400004: AlienFatLadyArm
@@ -17,24 +18,28 @@ ModelImporter:
     400008: AlienFatLadyEye2
     400010: AlienFatLadyLowerLip
     400012: AlienFatLadyUpperLip
+    400014: Bar
     2300000: AlienFatLady
     2300002: AlienFatLadyArm
     2300004: AlienFatLadyEye
     2300006: AlienFatLadyEye2
     2300008: AlienFatLadyLowerLip
     2300010: AlienFatLadyUpperLip
+    2300012: Bar
     3300000: AlienFatLady
     3300002: AlienFatLadyArm
     3300004: AlienFatLadyEye
     3300006: AlienFatLadyEye2
     3300008: AlienFatLadyLowerLip
     3300010: AlienFatLadyUpperLip
+    3300012: Bar
     4300000: AlienFatLadyArm
     4300002: AlienFatLadyEye
     4300004: AlienFatLadyEye2
     4300006: AlienFatLady
     4300008: AlienFatLadyLowerLip
     4300010: AlienFatLadyUpperLip
+    4300012: Bar
     9500000: //RootNode
   materials:
     importMaterials: 1
