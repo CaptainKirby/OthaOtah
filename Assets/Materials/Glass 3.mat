@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Glass
+  m_Name: Glass 3
   m_Shader: {fileID: 4800000, guid: d3e7602fba812b94788a3ca4144851c6, type: 3}
   m_ShaderKeywords: []
   m_CustomRenderQueue: -1
@@ -40,7 +40,7 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: .462474585, g: .220588237, b: .882352948, a: .745098054}
+        second: {r: .462474585, g: .220588237, b: .882352948, a: .294117659}
       data:
         first:
           name: _RimColor
