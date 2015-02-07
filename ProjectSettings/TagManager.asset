@@ -4,6 +4,7 @@
 TagManager:
   tags:
   - pickup
+  - powercharge
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
