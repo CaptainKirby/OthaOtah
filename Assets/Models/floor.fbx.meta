@@ -1,23 +1,13 @@
 fileFormatVersion: 2
-guid: 861c5e032b43cf249846ffae716e5363
+guid: 6c0550162ac2e4172969e06a903e4ea6
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
     100000: //RootNode
-    100002: pCylinder1
-    100004: pSphere1
     400000: //RootNode
-    400002: pCylinder1
-    400004: pSphere1
-    2300000: pCylinder1
-    2300002: pSphere1
-    2300004: //RootNode
-    3300000: pCylinder1
-    3300002: pSphere1
-    3300004: //RootNode
-    4300000: pCylinder1
-    4300002: pSphere1
-    4300004: polySurface12
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: floor
     9500000: //RootNode
   materials:
     importMaterials: 0
@@ -70,6 +60,6 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   additionalBone: 0
   userData: 
