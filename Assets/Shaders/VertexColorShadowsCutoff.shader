@@ -35,7 +35,7 @@ Shader "Custom/CutoutFade" {
 		void surf (Input IN, inout SurfaceOutput o) {
 			fixed4 c = _Color * IN.color;
 			o.Albedo = c.rgb;
-//			o.Alpha = c.a;
+			o.Alpha = c.a;
 		}
 		ENDCG
 	}

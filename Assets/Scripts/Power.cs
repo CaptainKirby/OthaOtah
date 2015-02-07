@@ -8,7 +8,7 @@ public class Power : MonoBehaviour {
 	Player player;
 	private bool pressA;
 	private bool used;
-
+	public GameObject powerGauge;
 	// Use this for initialization
 	void Start () {
 		player = ReInput.players.GetPlayer(0);
@@ -20,7 +20,7 @@ public class Power : MonoBehaviour {
 	
 		power -= Time.deltaTime;
 		pressA = player.GetButtonDown("A");
-
+		powerGauge.renderer.material.SetFloat("_Cutoff", 1.0f - power/100);
 		if(inside && pressA && !used)
 		{
 			used = true;
