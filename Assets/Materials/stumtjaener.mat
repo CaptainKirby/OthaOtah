@@ -24,7 +24,7 @@ Material:
       data:
         first:
           name: _LightCutoff
-        second: 2
+        second: .200000003
     m_Colors:
       data:
         first:
