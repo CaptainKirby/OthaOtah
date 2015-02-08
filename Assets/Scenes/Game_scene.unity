@@ -12648,6 +12648,14 @@ Prefab:
       propertyPath: m_BackGroundColor.b
       value: .110294104
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: c7d73847b5df2a0418f2a004be339f4f, type: 2}
+      propertyPath: angleSmoothDuration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: c7d73847b5df2a0418f2a004be339f4f, type: 2}
+      propertyPath: angleMaxSpeed
+      value: 2000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c7d73847b5df2a0418f2a004be339f4f, type: 2}
   m_RootGameObject: {fileID: 1344760310}
@@ -22650,6 +22658,11 @@ MonoBehaviour:
   minZoom: 15.4499998
   moveDistance: 30
   center: {x: 0, y: 0, z: 0}
+  inputDirRight: {x: 0, y: 0, z: 0}
+  targetAngle: 0
+  angle: 0
+  angleSmoothDuration: 1
+  angleMaxSpeed: 2000
 --- !u!81 &1344760312
 AudioListener:
   m_ObjectHideFlags: 0

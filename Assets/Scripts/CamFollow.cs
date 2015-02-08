@@ -1,8 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+
+using Rewired;
 public class CamFollow : MonoBehaviour 
 {
+	Player player;
+
 	//	public Transform[] targets;
 	public List<Transform> targets;
 	public float zoomInTime = 1f;
@@ -22,15 +26,42 @@ public class CamFollow : MonoBehaviour
 	public Vector3 center;
 	private Vector3 center_target;
 	private Vector3 center_velocity = Vector3.zero;
+
+	public Vector3 inputDirRight;
+	public float targetAngle = 0;
+	public float angle = 0f;
+	private float angularVelocity = 0f;
 	
+	public float angleSmoothDuration = 0.05f;
+	public float angleMaxSpeed = 5800f;
 	void Start()
 	{
+		player = ReInput.players.GetPlayer(0);
+
 		center = GetCenter();
 		center_target = center;
 	}
-	
+
+	void Update()
+	{
+
+		
+	}
+
 	void FixedUpdate () 
 	{
+//		inputDirRight.x = player.GetAxis("AxisRightHorizontal");
+//		inputDirRight.z = player.GetAxis("AxisRightVertical");
+//		
+//		if(inputDirRight.magnitude > 0.3f)
+//		{
+//			float newTargetAngle = Mathf.Atan2(inputDirRight.x, inputDirRight.z) * Mathf.Rad2Deg;
+//			targetAngle = newTargetAngle;
+//			angle = Mathf.SmoothDampAngle(angle, targetAngle, ref angularVelocity, angleSmoothDuration, angleMaxSpeed); 
+//
+//		}
+//		transform.localRotation = Quaternion.Euler(transform.localRotation.eulerAngles.x, angle, transform.localRotation.eulerAngles.z); 
+
 		if(targets == null)
 		{
 			Debug.Log ("no targets");
