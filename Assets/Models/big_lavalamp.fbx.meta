@@ -1,41 +1,22 @@
 fileFormatVersion: 2
-guid: 75286b7fc02714a2f9fa06cfc1f1fa99
+guid: 5b84fc049fce044568072477e3b4fa90
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Couch
-    100004: pCube18
-    100006: pCube19
-    100008: pCube20
-    100010: pSphere1
-    100012: pSphere2
-    100014: pSphere3
-    100016: transform10
-    100018: transform11
-    100020: transform12
-    100022: transform13
-    100024: transform68
-    100026: transform69
-    400000: Couch
-    400002: //RootNode
-    400004: pCube18
-    400006: pCube19
-    400008: pCube20
-    400010: pSphere1
-    400012: pSphere2
-    400014: pSphere3
-    400016: transform10
-    400018: transform11
-    400020: transform12
-    400022: transform13
-    400024: transform68
-    400026: transform69
-    2300000: Couch
-    2300002: //RootNode
-    3300000: Couch
-    3300002: //RootNode
-    4300000: Couch
+    100002: polySurface92
+    100004: polySurface94
+    100006: polySurface98
+    400000: //RootNode
+    400002: polySurface92
+    400004: polySurface94
+    400006: polySurface98
+    2300000: polySurface94
+    2300002: polySurface98
+    3300000: polySurface94
+    3300002: polySurface98
+    4300000: polySurface94
+    4300002: polySurface98
     9500000: //RootNode
   materials:
     importMaterials: 0
