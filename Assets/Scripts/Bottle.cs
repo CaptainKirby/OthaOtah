@@ -9,6 +9,7 @@ public class Bottle : MonoBehaviour {
 	private AudioClip[] glassBreak;
 
 	private bool playable = true;
+	public GameObject wineSpill;
 //	private SoundManager sM;
 	void Start () {
 //		sM = GameObject.FindObjectOfType<SoundManager>();
