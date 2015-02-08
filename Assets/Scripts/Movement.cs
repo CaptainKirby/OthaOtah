@@ -85,8 +85,8 @@ public class Movement : MonoBehaviour {
 				//				Debug.Log ("ngues");
 				transform.position = this.transform.position + Vector3.right*0.08f;
 			}
-			if(!rotating)
-			{
+//			if(!rotating)
+//			{
 				if(inputDirLeft.magnitude > 0.3f)
 				{
 					footsteps.enableEmission = true;
@@ -96,19 +96,19 @@ public class Movement : MonoBehaviour {
 					footsteps.enableEmission = false;
 				}
 				rigidbody.MovePosition(rigidbody.position + inputDirLeft * speed * Time.deltaTime);
-			}
+//			}
 
-			if(inputDirRight.magnitude > 0.3f)
+			if(inputDirLeft.magnitude > 0.3f)
 			{
 				footsteps.enableEmission = false;
 				rotating = true;
-				float newTargetAngle = Mathf.Atan2(inputDirRight.x, inputDirRight.z) * Mathf.Rad2Deg;
+				float newTargetAngle = Mathf.Atan2(inputDirLeft.x, inputDirLeft.z) * Mathf.Rad2Deg;
 				targetAngle = newTargetAngle;
 			}
-			else
-			{
-				rotating = false;
-			}
+//			else
+//			{
+//				rotating = false;
+//			}
 			angle = Mathf.SmoothDampAngle(angle, targetAngle, ref angularVelocity, angleSmoothDuration, angleMaxSpeed);
 
 			rigidbody.MoveRotation(Quaternion.Euler(0,angle,0));

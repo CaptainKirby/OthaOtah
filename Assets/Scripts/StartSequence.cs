@@ -8,6 +8,7 @@ public class StartSequence : MonoBehaviour {
 	public GameObject beamParticle;
 	bool startChargeUp;
 	float power;
+	GameObject beam;
 	void Awake()
 	{
 		GetComponent<Movement>().starting = true;
@@ -17,7 +18,7 @@ public class StartSequence : MonoBehaviour {
 
 		player = this.gameObject.transform;
 		Instantiate(powerStation, new Vector3(player.position.x, player.position.y - 2, player.position.z), Quaternion.identity);
-		GameObject beam = Instantiate(beamParticle, new Vector3(player.position.x, player.position.y - 2, player.position.z), beamParticle.transform.rotation) as GameObject;
+		beam = Instantiate(beamParticle, new Vector3(player.position.x, player.position.y - 2, player.position.z), beamParticle.transform.rotation) as GameObject;
 		StartCoroutine(FadeOut(beam));
 
 	}
@@ -47,6 +48,7 @@ public class StartSequence : MonoBehaviour {
 			}
 			else
 			{
+				beam.SetActive(false);
 				GetComponent<Movement>().starting = false;
 
 				onOff= false;
