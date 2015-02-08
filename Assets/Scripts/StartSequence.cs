@@ -38,7 +38,7 @@ public class StartSequence : MonoBehaviour {
 	{
 		bool onOff = true;
 		float mTime = 0;
-		Debug.Log("GENGUG");
+//		Debug.Log("GENGUG");
 		while(onOff)
 		{
 			if(mTime <1)

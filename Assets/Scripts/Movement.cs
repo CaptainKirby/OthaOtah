@@ -28,8 +28,12 @@ public class Movement : MonoBehaviour {
 	public bool dead;
 	public ParticleSystem footsteps;
 	public bool starting;
+	private AudioClip[] wallBumps;
+	private bool playable;
 	void Start () 
 	{
+		playable = true;
+		wallBumps = SoundManager.LoadAllFromGroup("robot");
 		player = ReInput.players.GetPlayer(0);
 	}
 	
@@ -47,7 +51,7 @@ public class Movement : MonoBehaviour {
 		pressY = player.GetButtonDown("Y");
 		pressA = player.GetButtonDown("A");
 		inputDirRight = Quaternion.Euler(0, Camera.main.transform.rotation.eulerAngles.y, 0) * inputDirRight;
-
+//		
 		if(!dead && !starting)
 		{
 			//		speed = speed + accel * inputDirLeft.magnitude * Time.deltaTime;
@@ -67,40 +71,56 @@ public class Movement : MonoBehaviour {
 			if(Physics.Raycast(transform.position, Vector3.forward, out hitFront, 1f))
 			{
 //				Debug.Log ("ngues");
+				if(playable)
+				{
+					StartCoroutine(PlayBump());
+				}
 				transform.position = this.transform.position - Vector3.forward*0.08f;
 			}
 			if(Physics.Raycast(transform.position, -Vector3.forward, out hitBack, 1f))
 			{
+				if(playable)
+				{
+					StartCoroutine(PlayBump());
+				}
 //				Debug.Log ("ngues");
 				transform.position = this.transform.position + Vector3.forward*0.08f;
 			}
 			if(Physics.Raycast(transform.position, Vector3.right, out hitRight, 1f))
 			{
+				if(playable)
+				{
+					StartCoroutine(PlayBump());
+				}
 //				Debug.Log ("ngues");
 				transform.position = this.transform.position - Vector3.right*0.08f;
 			}
 
 			if(Physics.Raycast(transform.position, -Vector3.right, out hitLeft, 1f))
 			{
+				if(playable)
+				{
+					StartCoroutine(PlayBump());
+				}
 				//				Debug.Log ("ngues");
 				transform.position = this.transform.position + Vector3.right*0.08f;
 			}
 //			if(!rotating)
 //			{
-				if(inputDirLeft.magnitude > 0.3f)
-				{
-					footsteps.enableEmission = true;
-				}
-				else
-				{
-					footsteps.enableEmission = false;
-				}
+			if(inputDirLeft.magnitude > 0.3f)
+								{ 
+									footsteps.enableEmission = true;
+								}
+								else
+								{
+									footsteps.enableEmission = false;
+								}
 				rigidbody.MovePosition(rigidbody.position + inputDirLeft * speed * Time.deltaTime);
 //			}
 
 			if(inputDirLeft.magnitude > 0.3f)
 			{
-				footsteps.enableEmission = false;
+//				footsteps.enableEmission = false;
 				rotating = true;
 				float newTargetAngle = Mathf.Atan2(inputDirLeft.x, inputDirLeft.z) * Mathf.Rad2Deg;
 				targetAngle = newTargetAngle;
@@ -116,6 +136,15 @@ public class Movement : MonoBehaviour {
 //		gfxObj.transform.localRotation = Quaternion.Euler(0, angle, 0); 
 
 
+
+	}
+
+	IEnumerator PlayBump()
+	{
+		SoundManager.PlaySFX(wallBumps[Random.Range(0, wallBumps.Length)], false, 0, 2, 1, this.transform.position); 
+		playable = false;
+		yield return new WaitForSeconds(0.5f);
+		playable = true;
 
 	}
 

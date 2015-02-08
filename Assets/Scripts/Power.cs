@@ -10,6 +10,8 @@ public class Power : MonoBehaviour {
 	private bool used;
 	public GameObject powerGauge;
 	public bool dead;
+	public GameObject chargeParticle;
+	public GameObject deathParticle;
 	// Use this for initialization
 	void Start () {
 		player = ReInput.players.GetPlayer(0);
@@ -25,11 +27,14 @@ public class Power : MonoBehaviour {
 		powerGauge.renderer.material.SetFloat("_Cutoff", 1.0f - power/100);
 		if(inside && pressA && !used)
 		{
+			Instantiate(chargeParticle,this.transform.position,chargeParticle.transform.rotation);
+
 			used = true;
 			power = 100;
 		}
 		if(power <= 11 && !dead && !GetComponent<Movement>().starting)
 		{
+			Instantiate(deathParticle,this.transform.position,deathParticle.transform.rotation);
 			dead = true;
 		}
 	}

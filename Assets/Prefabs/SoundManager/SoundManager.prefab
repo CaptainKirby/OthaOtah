@@ -1,0 +1,367 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400000}
+  - 114: {fileID: 11400000}
+  - 82: {fileID: 8200000}
+  - 82: {fileID: 8200002}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!82 &8200000
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!82 &8200002
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 617da7e6dc6c82f43988a70b1b7fd69e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  helpOn: 0
+  showInfo: 1
+  showDev: 1
+  showList: 1
+  showAdd: 1
+  showSFX: 1
+  showSFXDetails: 0101010101010000000000000000000000000000
+  groupAddIndex: 4
+  autoPrepoolAmount: 0
+  autoBaseVolume: 1
+  autoVolumeVariation: 0
+  autoPitchVariation: 0
+  showAsGrouped: 1
+  soundConnections: []
+  audios:
+  - {fileID: 8200000}
+  - {fileID: 8200002}
+  currentLevel: 
+  currentSoundConnection:
+    level: 
+    isCustomLevel: 0
+    soundsToPlay: []
+    baseVolumes: []
+    playMethod: 0
+    minDelay: 0
+    maxDelay: 0
+    delay: 0
+  crossDuration: 5
+  showDebug: 1
+  offTheBGM: 0
+  isPaused: 0
+  movingOnFromSong: 0
+  ignoreLevelLoad: 0
+  resourcesPath: Sounds/SFX
+  storedSFXs:
+  - {fileID: 8300000, guid: 69334bd4aa0656444badfa086e973182, type: 3}
+  - {fileID: 8300000, guid: 6d562d486779027449605965a74f494a, type: 3}
+  - {fileID: 8300000, guid: ad6c4b333872b7a45a0926c8e172ba07, type: 3}
+  - {fileID: 8300000, guid: 29e7ba1b69e99b549beed2d5fccc99a1, type: 3}
+  - {fileID: 8300000, guid: e4a97df84f5bd384a8665c891b681c5a, type: 3}
+  - {fileID: 8300000, guid: b3fcbdf1291750445b1a4f680f59993b, type: 3}
+  - {fileID: 8300000, guid: 73b35515fca06254fb735ba86a28534a, type: 3}
+  - {fileID: 8300000, guid: c0ea72fc6947388468b6e60359dba4b1, type: 3}
+  - {fileID: 8300000, guid: 186468a16ee65d843b23659cc4b8bd7f, type: 3}
+  - {fileID: 8300000, guid: ef4bddf72ea219741b58ecd71a932514, type: 3}
+  - {fileID: 8300000, guid: da79e4c97b517e14dba1e097b47b25d0, type: 3}
+  - {fileID: 8300000, guid: b656d851ae4a83641891cc381012c0bd, type: 3}
+  - {fileID: 8300000, guid: 903993f1a72e71d49bf15be9ebacf7d3, type: 3}
+  - {fileID: 8300000, guid: a23a28d457b0e614d9db40285a20d31c, type: 3}
+  - {fileID: 8300000, guid: 49ded23b4b781c642b7361e13772d276, type: 3}
+  - {fileID: 8300000, guid: 643289d9e49aae24e9d7b1a800bc3f5f, type: 3}
+  - {fileID: 8300000, guid: 33352e0f4c07cdf43b652c64739257c9, type: 3}
+  - {fileID: 8300000, guid: e847e61bd3cee0349b691c00520c94c7, type: 3}
+  - {fileID: 8300000, guid: 73b315b72e5ac6548b89f17129d830ed, type: 3}
+  - {fileID: 8300000, guid: b79904c314b38d5428eaba0ce0c4a618, type: 3}
+  unOwnedSFXObjects: []
+  sfxGroups:
+  - groupName: glass
+    specificCapAmount: 0
+    clips: []
+    independentVolume: 0
+    independentPitch: 0
+    volume: 1
+    pitch: 1
+  - groupName: glassBreak
+    specificCapAmount: 0
+    clips: []
+    independentVolume: 0
+    independentPitch: 0
+    volume: 1
+    pitch: 1
+  - groupName: robot
+    specificCapAmount: 0
+    clips: []
+    independentVolume: 0
+    independentPitch: 0
+    volume: 1
+    pitch: 1
+  - groupName: robotInteraction
+    specificCapAmount: 0
+    clips: []
+    independentVolume: 0
+    independentPitch: 0
+    volume: 1
+    pitch: 1
+  clipToGroupKeys:
+  - CLASS CINGING TOGETHER LONGER VER 1
+  - CLASS CINGING TOGETHER LONGER VER 2
+  - CLASS CINGING TOGETHER LONGER VER 3
+  - 'CLASS CINGING TOGETHER SHORTER VER 1 '
+  - CLASS CINGING TOGETHER SHORTER VER 2
+  - CLASS CINGING TOGETHER SHORTER VER 3
+  - BREAKING CLASS 1
+  - BREAKING CLASS 2
+  - BREAKING CLASS 3
+  - ROBOT BUBMPING INTO STUFF HEAVY VER 1
+  - ROBOT BUBMPING INTO STUFF HEAVY VER 2
+  - ROBOT BUBMPING INTO STUFF HEAVY VER 3
+  - ROBOT BUBMPING INTO STUFF LIGHT VER 1
+  - ROBOT BUBMPING INTO STUFF LIGHT VER 2
+  - ROBOT BUBMPING INTO STUFF LIGHT VER 3
+  - ROBOT SHUTTING DOWN VER 1
+  - ROBOT WHEELS LOOP
+  - ROBOT BLEEP SOUND  LOOP VER 2
+  - ROBOT BLEEP SOUND  LOOP VER 1
+  - AMB NO MUSIC VER 1
+  clipToGroupValues:
+  - glass
+  - glass
+  - glass
+  - glass
+  - glass
+  - glass
+  - glassBreak
+  - glassBreak
+  - glassBreak
+  - robot
+  - robot
+  - robot
+  - robot
+  - robot
+  - robot
+  - robotInteraction
+  - robotInteraction
+  - robotInteraction
+  - robotInteraction
+  - robotInteraction
+  offTheSFX: 0
+  capAmount: 3
+  sfxPrePoolAmounts: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  sfxBaseVolumes:
+  - .300000012
+  - .300000012
+  - .300000012
+  - .300000012
+  - .300000012
+  - .300000012
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  sfxVolumeVariations:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  sfxPitchVariations:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  SFXObjectLifetime: 10
+  currentPockets:
+  - Default
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1
+  m_IsExploded: 1

@@ -496,7 +496,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100032}
   m_LocalRotation: {x: -.707106829, y: 0, z: 0, w: .707106829}
-  m_LocalPosition: {x: -.0958535671, y: -1.91445136, z: -.124900341}
+  m_LocalPosition: {x: -.0958535671, y: -1.91445136, z: .111627817}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400010}
@@ -760,6 +760,7 @@ MonoBehaviour:
   gfxObj: {fileID: 0}
   dead: 0
   footsteps: {fileID: 19800000}
+  starting: 0
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -787,6 +788,8 @@ MonoBehaviour:
   power: 100
   powerGauge: {fileID: 0}
   dead: 0
+  chargeParticle: {fileID: 100000, guid: 0bd33bc79478dbf458cfe157dc780bf8, type: 2}
+  deathParticle: {fileID: 100002, guid: 673cc7ba5e43b154ca62df8319f1a787, type: 2}
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -800,6 +803,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   powerStation: {fileID: 100002, guid: 14ff0a0bbe8a0cc4bb001509ffe6e25d, type: 2}
   player: {fileID: 0}
+  beamParticle: {fileID: 100000, guid: 0171e09bac28c93498c336b045243511, type: 2}
 --- !u!114 &11400010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1109,7 +1113,7 @@ ParticleSystem:
     m_Mesh: {fileID: 0}
     randomDirection: 0
   EmissionModule:
-    enabled: 0
+    enabled: 1
     m_Type: 0
     rate:
       scalar: 7
