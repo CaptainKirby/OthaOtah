@@ -19,6 +19,7 @@ public class Objectives : MonoBehaviour {
 	public bool end;
 	void Start () 
 	{
+		barLocation = GameObject.FindGameObjectWithTag("pickup");
 		getDrink = true;
 		foreach(GameObject g in GameObject.FindGameObjectsWithTag("client"))
 		{

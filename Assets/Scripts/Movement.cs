@@ -50,6 +50,8 @@ public class Movement : MonoBehaviour {
 
 		pressY = player.GetButtonDown("Y");
 		pressA = player.GetButtonDown("A");
+		inputDirLeft = Quaternion.Euler(0, Camera.main.transform.rotation.eulerAngles.y, 0) * inputDirLeft;
+
 		inputDirRight = Quaternion.Euler(0, Camera.main.transform.rotation.eulerAngles.y, 0) * inputDirRight;
 //		
 		if(!dead && !starting)

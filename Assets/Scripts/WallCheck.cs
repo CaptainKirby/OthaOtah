@@ -99,7 +99,7 @@ public class WallCheck : MonoBehaviour
 		//false = 100 to 0
 		while(onOff)
 		{
-			Debug.Log (mTime);
+//			Debug.Log (mTime);
 			if(!toFrom)
 			{
 				if(mTime > 0)
