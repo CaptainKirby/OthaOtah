@@ -29,7 +29,9 @@ public class Bottle : MonoBehaviour {
 //		Debug.Log (objectives.clients[objectives.curClient].name);
 		if(col.CompareTag("deposit")&& col.transform.parent.gameObject == objectives.curClientObj)
 		{
-			Debug.Log (col.transform.parent.name + col.transform.parent.gameObject);
+			Instantiate(wineSpill,this.transform.position, Quaternion.identity);
+
+//			Debug.Log (col.transform.parent.name + col.transform.parent.gameObject);
 			bottleMgr.deliveredBottles ++;
 			bottleMgr.curBottles.Remove(this.gameObject);
 			this.gameObject.SetActive(false);
@@ -44,6 +46,7 @@ public class Bottle : MonoBehaviour {
 		}
 		if(!col.gameObject.CompareTag("Player") && !col.gameObject.CompareTag("pickup") && !col.gameObject.CompareTag("glass")  )
 		{
+			Instantiate(wineSpill,this.transform.position, Quaternion.identity);
 			SoundManager.PlaySFX(glassBreak[Random.Range(0, glassBreak.Length)], false, 0, 1.5f, 1, transform.position); 
 
 			bottleMgr.destroyedBottles++;

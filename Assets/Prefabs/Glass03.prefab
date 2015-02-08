@@ -98,15 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 419109e83c81d2b488978a234aff8f8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glassCling:
-  - {fileID: 8300000, guid: 69334bd4aa0656444badfa086e973182, type: 3}
-  - {fileID: 8300000, guid: 6d562d486779027449605965a74f494a, type: 3}
-  - {fileID: 8300000, guid: ad6c4b333872b7a45a0926c8e172ba07, type: 3}
-  - {fileID: 8300000, guid: 29e7ba1b69e99b549beed2d5fccc99a1, type: 3}
-  - {fileID: 8300000, guid: e4a97df84f5bd384a8665c891b681c5a, type: 3}
-  - {fileID: 8300000, guid: b3fcbdf1291750445b1a4f680f59993b, type: 3}
-  glassBreak: []
-  aSGObj: {fileID: 100000, guid: e5a4b0485e124dd4d83d2206e864c29c, type: 2}
+  wineSpill: {fileID: 100000, guid: 4fb9394a2fab442e7b24c4a1cfcae670, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
