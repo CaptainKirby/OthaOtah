@@ -11,7 +11,7 @@ GameObject:
   - 198: {fileID: 19800000}
   - 199: {fileID: 19900000}
   m_Layer: 0
-  m_Name: PurpleSmoke
+  m_Name: WineSpill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23,7 +23,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_LocalRotation: {x: -.707106829, y: 0, z: 0, w: .707106829}
+  m_LocalRotation: {x: 0, y: .707106709, z: -.707106888, w: -5.39780665e-08}
   m_LocalPosition: {x: -1.75596714, y: 2.66287422, z: 1.47548115}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -35,18 +35,18 @@ ParticleSystem:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  lengthInSec: 5
+  lengthInSec: .800000012
   startDelay: 0
   speed: 1
   randomSeed: 0
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   moveWithTransform: 0
   InitialModule:
     enabled: 1
     startLifetime:
-      scalar: 4.76000023
+      scalar: 1.97000003
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -79,7 +79,7 @@ ParticleSystem:
         m_PostInfinity: 2
       minMaxState: 0
     startSpeed:
-      scalar: .5
+      scalar: 2.3599999
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -206,7 +206,7 @@ ParticleSystem:
         rgba: 4294967295
       minMaxState: 0
     startSize:
-      scalar: .479999989
+      scalar: .800000012
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -279,7 +279,7 @@ ParticleSystem:
     enabled: 1
     type: 4
     radius: .00999999978
-    angle: 23.4699993
+    angle: 57.0999985
     length: 5
     boxX: 1
     boxY: 1
@@ -291,7 +291,7 @@ ParticleSystem:
     enabled: 1
     m_Type: 0
     rate:
-      scalar: 4.71999979
+      scalar: 13.75
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -398,10 +398,10 @@ ParticleSystem:
       maxGradient:
         key0:
           serializedVersion: 2
-          rgba: 4014080059
+          rgba: 4009886270
         key1:
           serializedVersion: 2
-          rgba: 989802472
+          rgba: 976040579
         key2:
           serializedVersion: 2
           rgba: 2785017855
