@@ -10,7 +10,6 @@ GameObject:
   - 4: {fileID: 414534}
   - 33: {fileID: 3314534}
   - 23: {fileID: 2314534}
-  - 95: {fileID: 9514534}
   - 54: {fileID: 5461268}
   - 65: {fileID: 6561268}
   m_Layer: 2
@@ -66,7 +65,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 114534}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 2
   m_Drag: 0
   m_AngularDrag: .0500000007
   m_UseGravity: 1
@@ -86,21 +85,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.75323701, y: 1.44610667, z: 8.88155079}
   m_Center: {x: 0, y: .768483639, z: 0}
---- !u!95 &9514534
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 114534}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 1fa824a21701d4e99ba3a328fb36e379, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
