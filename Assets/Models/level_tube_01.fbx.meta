@@ -4,17 +4,22 @@ ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
     100000: //RootNode
-    100002: pCylinder25
-    100004: pPlane11
+    100002: pCylinder31
+    100004: pCylinder32
+    100006: pPlane10
     400000: //RootNode
-    400002: pCylinder25
-    400004: pPlane11
-    2300000: pCylinder25
-    2300002: pPlane11
-    3300000: pCylinder25
-    3300002: pPlane11
-    4300000: pCylinder25
-    4300002: pPlane11
+    400002: pCylinder31
+    400004: pCylinder32
+    400006: pPlane10
+    2300000: pCylinder31
+    2300002: pCylinder32
+    2300004: pPlane10
+    3300000: pCylinder31
+    3300002: pCylinder32
+    3300004: pPlane10
+    4300000: pPlane10
+    4300002: pCylinder31
+    4300004: pCylinder32
     9500000: //RootNode
   materials:
     importMaterials: 0
@@ -67,6 +72,6 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   additionalBone: 0
   userData: 
