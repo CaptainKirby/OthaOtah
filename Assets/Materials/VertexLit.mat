@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: VertexLit
-  m_Shader: {fileID: 4800000, guid: 0de9eced49f72e4439eb397e53049f1d, type: 3}
+  m_Shader: {fileID: 4800000, guid: ce37f33e4e0176448aa7a3920da9ba9b, type: 3}
   m_ShaderKeywords: []
   m_CustomRenderQueue: -1
   m_SavedProperties:
