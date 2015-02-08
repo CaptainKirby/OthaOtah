@@ -36,6 +36,7 @@ public class Power : MonoBehaviour {
 		{
 			Instantiate(deathParticle,this.transform.position,deathParticle.transform.rotation);
 			dead = true;
+			GetComponent<Objectives>().end = true;
 		}
 	}
 
